@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import '../Header/Header.css';
 import { Avatar, Badge, Drawer, } from 'antd';
 import { useContext } from 'react';
@@ -10,6 +10,7 @@ import { connect } from 'react-redux';
 
 const Header = (props) => {
     const { cart } = useContext(CartContext);
+    const navigate = useNavigate();
 
     const [open1, setOpen1] = useState(false);
     const [open2, setOpen2] = useState(false);
@@ -48,7 +49,7 @@ const Header = (props) => {
                 <div className="container">
                     <div className="header__navigation-wrapper">
 
-                        <div className="header__navigation-wrapper--logo">
+                        <div onClick={() => navigate('/')} className="header__navigation-wrapper--logo">
                             <img src="https://cdn.shopify.com/s/files/1/0275/1027/6157/files/logo_300x300.png?v=1613788961" alt="" />
                         </div>
 
@@ -112,7 +113,7 @@ const Header = (props) => {
                                     </Link></li>
                                     <li>
                                         <Badge count={totalProduct}>
-                                            
+
                                             <Link onClick={showDrawer2} className="cartBtn">
                                                 <i className="fa-solid fa-bag-shopping"></i>
                                             </Link>
