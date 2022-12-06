@@ -1,0 +1,147 @@
+/* Featured Products */
+
+
+
+.product-list {
+    flex-wrap: wrap;
+}
+
+.featured-products__product {
+    margin: 1rem;
+    width: calc(100% / 4 - 2rem);
+}
+
+
+
+.featured-products__product .featured-product__product-thumb {
+    position: relative;
+}
+
+.featured-products__product:hover .featured-product__product-thumb .quickview-section ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+.featured-products__product .featured-product__product-thumb .quickview-section ul li:hover {
+    color: var(--white);
+}
+
+
+.featured-products__product .featured-product__product-thumb .quickview-section ul {
+    position: absolute;
+    width: 100%;
+    font-size: 1.8rem;
+    bottom: 0;
+    padding: .5rem;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    visibility: hidden;
+    transition: .4s;
+    opacity: 0;
+    color: var(--white);
+
+}
+
+.featured-products__product .featured-product__product-thumb .quickview-section ul li a {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.featured-products__product .featured-product__product-thumb .status {
+    font-size: 1.5rem;
+    background: var(--green);
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: .5rem;
+    color: var(--white);
+
+}
+
+.featured-products__product .featured-product__product-thumb .status p {
+    margin-bottom: 0;
+}
+
+.featured-products__product .featured-product__product-thumb .status-offer {
+    font-size: 1.5rem;
+    background: var(--red);
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: .5rem;
+    color: var(--white);
+
+}
+
+.featured-products__product .featured-product__product-thumb .status-offer p {
+    margin-bottom: 0;
+}
+
+
+
+.featured-products__product-des {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.featured-products__product-des .icons {
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--star);
+    padding-left: 0;
+
+}
+
+.featured-products__product-des ul.icons li {
+    margin-left: .5rem;
+}
+
+.featured-products__product-des .name {
+    font-size: 1.4rem;
+    color: var(--black);
+}
+
+.featured-products__product-des .price {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--green);
+
+}
+
+/* Responsive products list */
+
+@media screen and (max-width:767px) {
+    .featured-products__product {
+        margin: 1rem;
+        width: calc(100% / 2 - 2rem);
+
+    }
+}
+
+@media screen and (max-width:480px) {
+    #welcomeToStore .welcomeToStore__thumb img {
+        width: 25rem;
+    }
+
+    .featured-products__product {
+        width: 100%;
+        margin: 1rem;
+    }
+
+    .featured-products__product .featured-product__product-thumb .quickview-section ul {
+        position: absolute;
+        width: 100%;
+        font-size: 1.8rem;
+        bottom: 0;
+        padding: .5rem;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        visibility: visible;
+        transition: .4s;
+        opacity: 1;
+
+    }
+}

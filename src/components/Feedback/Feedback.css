@@ -1,0 +1,55 @@
+/* Feedback */
+
+#feedback {
+    width: 100%;
+    height: auto;
+}
+
+#feedback .feedback__wrapper .feedback__title {
+    text-align: center;
+    margin: 2rem 0;
+    position: relative;
+
+}
+
+#feedback .feedback__wrapper .feedback__title h2 {
+    font-size: 4.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+#feedback .feedback__wrapper .feedback__title::before {
+    content: '';
+    width: 9rem;
+    height: .2rem;
+    background: var(--black);
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+#feedback .feedback__wrapper .feedback__des .carousel-item--icons {
+    margin: 3rem 0;
+}
+
+#feedback .feedback__wrapper .feedback__des .carousel-item--content {
+    font-size: 1.8rem;
+    padding: 2rem 5rem;
+    margin: 1.5rem;
+}
+
+#feedback .feedback__wrapper .feedback__des .carousel-item--customerAuthor {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    font-weight: 500;
+}
+
+@media screen and (max-width:480px) {
+    #feedback .feedback__wrapper .feedback__title h2 {
+        font-size: 3.5rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+}

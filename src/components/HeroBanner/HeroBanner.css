@@ -1,0 +1,257 @@
+/* Banner */
+#banner {
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+}
+
+#banner .carousel {
+    width: 100%;
+    height: 100%;
+}
+
+#banner .carousel .carousel-indicators .slider-btn {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+
+
+}
+
+
+#banner .carousel.slide .carousel-inner {
+    width: 100%;
+    height: 100%;
+
+}
+
+#banner .carousel.slide .carousel-item {
+    width: 100%;
+    height: 100%;
+}
+
+#banner .carousel.slide .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+#banner .carousel-item .slider-content {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    left: 10%;
+    opacity: 1;
+    visibility: visible;
+    transition: .4s;
+    flex-wrap: wrap;
+
+}
+
+#banner .slider-content .active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 3.5s;
+
+
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+
+    }
+}
+
+
+
+#banner .carousel-item .slider-content h1 {
+    font-size: 1.6rem;
+    font-weight: medium;
+    margin-bottom: .5rem;
+    color: #323232;
+    position: relative;
+
+
+
+}
+
+
+#banner .carousel-item .slider-content h2 {
+    font-size: 6.5rem;
+    font-weight: 300;
+    line-height: 6.5rem;
+    margin: 4rem 0 2rem 0;
+    flex-wrap: wrap;
+}
+
+#banner .carousel-item .slider-content h2 span {
+    font-weight: 500;
+    flex-wrap: wrap;
+}
+
+
+#banner .carousel-item .slider-content p {
+    font-size: 2.5rem;
+
+}
+
+#banner .carousel-item .slider-content .app-btn {
+    padding: 1.5rem 4.5rem;
+    margin-top: 4rem;
+    font-size: 2rem;
+    border-radius: 3rem;
+    background: var(--black);
+    color: var(--white);
+    border: none;
+    transition: .2s;
+}
+
+#banner .carousel-item .slider-content .app-btn:hover {
+    background: var(--green);
+}
+
+/* Responsive banner*/
+@media screen and (max-width:767px) {
+    #banner .carousel-item .slider-content {
+        position: absolute;
+        top: 30%;
+        width: 100%;
+        left: 10%;
+        transition: .4s;
+        flex-wrap: wrap;
+
+    }
+
+    #banner .slider-content .active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    #banner .carousel-item .slider-content h1 {
+        font-size: 1.4rem;
+        font-weight: medium;
+        margin-bottom: .5rem;
+        color: #323232;
+        position: relative;
+    }
+
+
+    #banner .carousel-item .slider-content h2 {
+        font-size: 4.5rem;
+        font-weight: 300;
+        line-height: 6.5rem;
+        margin: 4rem 0 1rem 0;
+
+    }
+
+    #banner .carousel-item .slider-content h2 span {
+        font-weight: 500;
+
+    }
+
+
+    #banner .carousel-item .slider-content p {
+        font-size: 2.5rem;
+
+    }
+
+    #banner .carousel-item .slider-content .app-btn {
+        padding: 1.5rem 4.5rem;
+        margin-top: 4rem;
+        font-size: 2rem;
+        border-radius: 3rem;
+        background: var(--black);
+        color: var(--white);
+        border: none;
+        transition: .2s;
+    }
+
+
+}
+
+
+/* Thumbnail welcome */
+
+#welcomeToStore {
+    width: 100%;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin-bottom: 4rem;
+}
+
+
+
+#welcomeToStore .welcomeToStore__wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 5rem 3rem;
+    flex-wrap: wrap;
+
+}
+
+#welcomeToStore .welcomeToStore__thumb {
+    display: flex;
+    justify-content: center;
+}
+
+#welcomeToStore .welcomeToStore__thumb img {
+    width: 35rem;
+
+}
+
+#welcomeToStore .welcomeToStore__content {
+    padding: 0 1.5rem;
+    margin-bottom: .7rem;
+    align-items: flex-start;
+
+}
+
+#welcomeToStore .welcomeToStore__content-header {
+    margin-bottom: 2.5rem;
+}
+
+#welcomeToStore .welcomeToStore__content-header h3 {
+    font-size: 1.5rem;
+    color: var(--green);
+    font-weight: 500;
+    margin-bottom: 2rem;
+
+}
+
+#welcomeToStore .welcomeToStore__content-header h2 {
+    font-size: 4rem;
+    line-height: 4rem;
+    font-weight: 400;
+}
+
+#welcomeToStore .welcomeToStore__content-des p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+}
+
+#welcomeToStore .welcomeToStore__content-footer {
+    margin-top: 2.3rem;
+
+}
+
+#welcomeToStore .welcomeToStore__content-footer img {
+    width: 18rem;
+}
+
+#welcomeToStore .welcomeToStore__content-footer p {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+}
+
+#welcomeToStore .welcomeToStore__content-footer p span {
+    font-weight: 500;
+}

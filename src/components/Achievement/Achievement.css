@@ -1,0 +1,71 @@
+/* achievement  */
+
+#achievement {
+    position: relative;
+
+}
+
+#achievement .achievement__wrapper {
+    width: 100%;
+}
+
+#achievement .achievement__brand img {
+    width: 100%
+}
+
+#achievement:hover .slick-arrow {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+#achievement .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+}
+
+#achievement .slick-prev {
+    left: -1rem;
+}
+
+#achievement .slick-next {
+    right: -1rem;
+}
+
+/* Responsive achievement */
+@media screen and (max-width:767px) {
+
+    #achievement {
+        position: relative;
+
+    }
+
+    #achievement .slick-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        font-size: 2rem;
+        opacity: 0;
+        visibility: visible;
+        transition: .4s;
+    }
+
+    #achievement .slick-prev {
+        left: 0rem;
+    }
+
+    #achievement .slick-next {
+        right: 0rem;
+
+
+    }
+}

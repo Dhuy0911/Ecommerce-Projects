@@ -1,0 +1,121 @@
+#product {
+    width: 100%;
+    height: 100vh;
+}
+
+#product .productName {
+    width: 100%;
+    text-align: center;
+    margin: 2rem auto;
+    padding: 5rem;
+    background: #f3f3f3;
+}
+
+.productDetail__wrapper {
+    margin-top: 5rem;
+    width: 100%;
+    font-size: 1.6rem;
+
+}
+
+.productDetail__wrapper .product-img {
+    width: 100%;
+}
+
+.productDetail__wrapper .product-img img {
+    width: 50rem;
+    height: 50rem;
+    margin-left: 12rem;
+}
+
+.productDetail__wrapper .product-detail {
+    width: 100%;
+    flex-wrap: wrap;
+    line-height: 2.8rem;
+
+}
+
+.productDetail__wrapper .product-detail .icons {
+    color: var(--star);
+    letter-spacing: .5rem;
+    padding-left: unset;
+}
+
+.productDetail__wrapper .product-detail .price {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--green);
+}
+.productDetail__wrapper .product-detail .description {
+    font-weight: 300;
+}
+.productDetail__wrapper .product-detail .additional {
+    padding-left: unset;
+    margin-top: 1rem;
+
+}
+.productDetail__wrapper .product-detail .additional li {
+    margin-right: 2rem;
+}
+.productDetail__wrapper .quantity-wrapper {
+    font-weight: 400;
+    margin: 2rem 0;
+}
+
+.productDetail__wrapper .quantity-wrapper span {
+    margin: 0 3rem; 
+}
+
+.addToCartBtn , .buyNowBtn {
+    width: 30rem;
+    height: 4rem;
+    border-radius: 2rem;
+    background: var(--green);
+    border: none;
+    color: var(--white);
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+.addToCartBtn:hover , .buyNowBtn:hover {
+    background: var(--black);
+    transition: .4s;
+}
+.appPay {
+    display:flex;
+    padding-left: unset;
+}
+.appPay li {
+    margin-right: 1rem;
+    padding-left: unset;
+}
+
+.share {
+    margin-top: 2rem;
+    align-items: center;
+}
+.share .widget-social li {
+    margin-right: 2rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: .1rem solid none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+  
+}
+.share .widget-social li:hover {
+    background: var(--green);
+    transition: .4s;
+}
+
+#box-detail {
+    margin: 2rem 20rem;
+}
+.box-detail__wrapper {
+    padding: 2rem;
+}
+
+
+
