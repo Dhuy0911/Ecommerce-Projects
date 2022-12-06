@@ -24,7 +24,7 @@ const ProductsShopPage = () => {
         try {
             const productsData = await appAxios.get('/products', {
                 params: {
-                    limit, page
+                    limit, page,search
                 }
             })
 
