@@ -39,7 +39,7 @@ const ProductsShopPage = () => {
         setLoading(false);
     }
     useEffect(() => {
-        const callApiTimeOut = setTimeout(handleFetchProducts, 500);// debounce
+        const callApiTimeOut = setTimeout(handleFetchProducts(10,page), 500);// debounce
         return () => {
             clearTimeout(callApiTimeOut)
         }
