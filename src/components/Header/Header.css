@@ -90,6 +90,7 @@
     padding: 5rem 3rem;
     transform: translateX(0%);
     transition: .6s;
+    overflow: scroll;
 
 
 }

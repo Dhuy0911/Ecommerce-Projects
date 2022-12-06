@@ -7,6 +7,7 @@ const CartTable = (props) => {
         pagination={false}
         style={{
             margin: "3rem",
+            overflow:"scroll"
         }}
         columns={columns}
         dataSource={data}

@@ -13,15 +13,16 @@
         background: #f3f3f3;
     }
     .leftSide {
-        text-align: center;
         display: flex;
+        width: 100%;
+        overflow: hidden;
 
     }
     .leftSide input {
         height: 3rem;
     }
     .categories {
-        margin: 0 2rem 
+        width: 100%;
     }
     
 }
