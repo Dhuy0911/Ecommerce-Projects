@@ -4,3 +4,24 @@
     padding: 5rem ;
     background: #f3f3f3;
 }
+
+@media screen and (max-width:480px) {
+    .breadCrumb {
+        width: 100%;
+        margin: 2rem auto;
+        padding: 5rem ;
+        background: #f3f3f3;
+    }
+    .leftSide {
+        text-align: center;
+        display: flex;
+
+    }
+    .leftSide input {
+        height: 3rem;
+    }
+    .categories {
+        margin: 0 2rem 
+    }
+    
+}

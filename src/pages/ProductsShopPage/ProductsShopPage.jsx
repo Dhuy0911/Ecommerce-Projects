@@ -62,12 +62,8 @@ const ProductsShopPage = () => {
                     fontSize: '20px'
 
                 }}>
-                    <Breadcrumb.Item onClick={() => navigate('/') }
-                    style={{
-                        cursor: 'pointer'
-                    }}
-                    >
-                       Home
+                    <Breadcrumb.Item>
+                       <a href="/"> Home</a>
                     </Breadcrumb.Item>
                     <Breadcrumb.Item>
                         Shop
@@ -76,13 +72,13 @@ const ProductsShopPage = () => {
             </div>
             <div className="container">
                 <div className="row">
-                    <div className="col-3">
-                        <div className="categories">
+                    <div className="col-lg-3 col-md-6 col-12">
+                        <div className="leftSide">
                             <input type="text" placeholder='Search...' className='my-3' onChange={(e) => setSearch(e.target.value)} value={search} />
                             <Categiores />
                         </div>
                     </div>
-                    <div className="col-9">
+                    <div className="col-lg-9 col-md-6 col-12">
                         <div className="products-list d-flex flex-wrap justify-content-between">
                             <ProductsList handlechangePagination={handlechangePagination} products={products} loading={loading} />
                         </div>

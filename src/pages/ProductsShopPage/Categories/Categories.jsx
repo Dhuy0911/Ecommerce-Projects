@@ -27,21 +27,23 @@ const items = [
   ]),
 ];
 const Categiores = () => {
-    const onClick = (e) => {
-        console.log('click ', e);
-      };
-      return (
-        <Menu
-          onClick={onClick}
-          style={{
-            width: 256,
-          }}
-          defaultSelectedKeys={['1']}
-          defaultOpenKeys={['sub1']}
-          mode="inline"
-          items={items}
-        />
-      );
+  const onClick = (e) => {
+    console.log('click ', e);
+  };
+  return <div className='categories'>
+    <Menu
+      onClick={onClick}
+      style={{
+        width: 256,
+      }}
+      defaultSelectedKeys={['1']}
+      defaultOpenKeys={['sub1']}
+      mode="inline"
+      items={items}
+    />
+  </div>
+
+    ;
 
 }
 export default Categiores

@@ -116,7 +116,7 @@
     .featured-products__product {
         margin: 1rem;
         width: calc(100% / 2 - 2rem);
-
+        
     }
 }
 

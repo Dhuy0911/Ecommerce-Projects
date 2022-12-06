@@ -1,9 +1,7 @@
 import './Footer.css';
 
 const Footer = () => {
-    return <div>
-        {/* <!-- Footer  --> */}
-        <footer>
+    return <footer>
             <div className="container">
                 <div className="row">
                     <div className="col-12">
@@ -86,6 +84,5 @@ const Footer = () => {
 
         {/* <!-- End Footer --> */}
 
-    </div>
 }
 export default Footer

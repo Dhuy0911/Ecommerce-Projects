@@ -46,6 +46,7 @@
 
 .header .header__navigation-wrapper--logo img {
     width: 15rem;
+    cursor: pointer;
 }
 
 /* Cart Section */
@@ -318,5 +319,9 @@
         font-size: 1.4rem;
         margin: 1rem;
 
+    }
+    .header__navigation-mobile--links {
+        line-height: 2.5;
+        font-weight: bold;
     }
 }

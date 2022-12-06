@@ -116,14 +116,13 @@ const DetailProduct = () => {
             <div className="container">
                 <div className="productDetail__wrapper">
                     <div className="row">
-                        <div className="col-6 d-flex">
+                        <div className="col-lg-6 col-md-6 col-12 d-flex">
                             <div className="product-img">
                                 <img src={product.image}
                                     alt="" />
                             </div>
-
                         </div>
-                        <div className="col-6">
+                        <div className="col-lg-6 col-md-6 col-12">
                             <div className="product-detail">
                                 <h2>{product.name}</h2>
                                 <ul className="icons d-flex">
@@ -201,67 +200,70 @@ const DetailProduct = () => {
 
                     </div>
                 </div>
-
-
             </div>
-
         </section>
         <section id="box-detail">
-            <div className="box-detail__wrapper d-flex">
-                <Collapse style={{
-                    width: '100%'
-                }} defaultActiveKey={['1']} onChange={onChange}>
-                    <Panel header="Description" key="1">
-                        <p>{product.description}</p>
-                    </Panel>
-                    <Panel header="Reviews" key="2">
-                        <p>Customer Reviews
-                            No reviews yet</p>
-                        <a href="#">Write a review</a>
-                    </Panel>
-                    <Panel header="Shipping Policy" key="3">
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-                            ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
-                            tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                            iriure dolor in hendrerit in vulputate
-                            <ul>
-                                <li>
-                                    1-2 business days (Typically by end of day)
-                                </li>
-                                <li>
-                                    30 days money back guaranty
-                                </li>
-                                <li>
-                                    24/7 live support
-                                </li>
-                                <li>
-                                    odio dignissim qui blandit praesent
-                                </li>
-                                <li>
-                                    luptatum zzril delenit augue duis dolore
-                                </li>
-                                <li>
-                                    te feugait nulla facilisi.
-                                </li>
-                            </ul>
-                            Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim
-                            placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui
-                            facit eorum
-                            claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
-                            Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est
-                            notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas
-                            humanitatis per
-                            seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari,
-                            fiant sollemnes in futurum.</p>
-                    </Panel>
-                </Collapse>
+            <div className='container'>
+                <div className="row">
+                    <div className="col-12">
+                        <div className="box-detail__wrapper d-flex">
+                            <Collapse style={{
+                                width: '100%',
+                            }} defaultActiveKey={['1']} onChange={onChange}>
+                                <Panel header="Description" key="1">
+                                    <p>{product.description}</p>
+                                </Panel>
+                                <Panel header="Reviews" key="2">
+                                    <p>Customer Reviews
+                                        No reviews yet</p>
+                                    <a href="#">Write a review</a>
+                                </Panel>
+                                <Panel header="Shipping Policy" key="3">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                                        ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+                                        tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
+                                        iriure dolor in hendrerit in vulputate
+                                        <ul>
+                                            <li>
+                                                1-2 business days (Typically by end of day)
+                                            </li>
+                                            <li>
+                                                30 days money back guaranty
+                                            </li>
+                                            <li>
+                                                24/7 live support
+                                            </li>
+                                            <li>
+                                                odio dignissim qui blandit praesent
+                                            </li>
+                                            <li>
+                                                luptatum zzril delenit augue duis dolore
+                                            </li>
+                                            <li>
+                                                te feugait nulla facilisi.
+                                            </li>
+                                        </ul>
+                                        Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim
+                                        placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui
+                                        facit eorum
+                                        claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+                                        Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est
+                                        notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas
+                                        humanitatis per
+                                        seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari,
+                                        fiant sollemnes in futurum.</p>
+                                </Panel>
+                            </Collapse>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </section>
-        <div className='relatedProduct text-center'>
+        {/* <div className='relatedProduct text-center'>
             <h1>Related Products</h1>
-
-        </div>
         <RelatedProduct />
+        </div> */}
         <Footer />
 
     </>

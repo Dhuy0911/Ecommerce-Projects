@@ -134,42 +134,44 @@ const CartPage = (props) => {
 
             }}>
                 <Breadcrumb.Item>
-                   <a href="/"> Home</a>
+                    <a href="/"> Home</a>
                 </Breadcrumb.Item>
                 <Breadcrumb.Item>
                     Your Cart
                 </Breadcrumb.Item>
             </Breadcrumb>
         </div>
-        
 
 
-     
+
+
         {/* <CartTable data={cart} columns={columns} /> */}
-        <div className='d-flex justify-content-between'>
-        <div className='col-8'>
-            {
-                cart.map((cartItem) => {
-                    return <div key={cartItem.id}>
-                        <ProductInCart handleRemoveProduct={handleRemoveProduct} updateQuantity={handleUpdateQuantity} cartItem={cartItem} />
-                    </div>
-                })
-            }
-        </div>
+        <div className=' cart__wrapper d-flex justify-content-between'>
+            <div className='col-lg-8 col-md-6 col-12'>
+                {
+                    cart.map((cartItem) => {
+                        return <div key={cartItem.id}>
+                            <ProductInCart handleRemoveProduct={handleRemoveProduct} updateQuantity={handleUpdateQuantity} cartItem={cartItem} />
+                        </div>
+                    })
+                }
+            </div>
 
-            <div className='col-4'>
-                <CartInfomation totalProduct={totalProduct} totalPrice={totalPrice} />
+            <div className='col-lg-4 col-md-6 col-12'>
+                <div className='total'>
+                    <CartInfomation totalProduct={totalProduct} totalPrice={totalPrice} />
+                </div>
             </div>
         </div>
         <div className='col-12' style={{
-            textAlign:'center'
+            textAlign: 'center'
         }}>
             <Button onClick={() => { navigate('/shop') }} style={{
                 margin: "3rem"
             }}>Continue Shopping</Button>
         </div>
 
-<Footer />
+        <Footer />
 
 
     </>

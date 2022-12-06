@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import CartContext from "../../context/CartContext"
+import './CartPage.css'
 
 const CartInfomation = (props) => {
     const {cart,setCart} = useContext(CartContext);
