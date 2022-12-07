@@ -125,7 +125,8 @@
 
 @media screen and (max-width:767px) {
     .productDetail__wrapper {
-        margin-top: 5rem;
+        margin-top: 0rem;
+        overflow: hidden;
         
     }
     .productDetail__wrapper .product-img {
@@ -134,7 +135,7 @@
     }
     .productDetail__wrapper .product-img img {
         height: 42rem;
-        margin: 2rem 0;
+        margin: 1rem 0;
         width: 100%;
     }
     .addToCartBtn , .buyNowBtn {
