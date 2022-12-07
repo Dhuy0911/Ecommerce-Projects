@@ -6,6 +6,7 @@ import { ArrowRightOutlined } from '@ant-design/icons';
 import { useContext } from 'react';
 import CartContext from '../../context/CartContext';
 import { useNavigate } from 'react-router-dom';
+import Loading from '../Loading/Loading';
 
 
 
@@ -30,7 +31,7 @@ const FeaturedProductsList = (props) => {
                     <div className="col-12">
 
 
-                        {loading ? <Spin /> : <div className="product-list d-flex justify-content-center flex-wrap">
+                        {loading ? <Loading/> : <div className="product-list d-flex justify-content-center flex-wrap">
                             {
                                 products.map((product) => {
                                     return <FeaturedProducts product={product} key={product.id} />

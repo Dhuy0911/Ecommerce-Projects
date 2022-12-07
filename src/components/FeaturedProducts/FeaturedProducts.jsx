@@ -9,7 +9,7 @@ import '../FeaturedProducts/FeaturedProductsList.css';
 
 const FeaturedProducts = (props) => {
     const { cart, setCart } = useContext(CartContext);
-    const cartState = useSelector(state => state.cart)
+    // const cartState = useSelector(state => state.cart)
     const navigate = useNavigate();
     const params = useParams();
     const { product } = props;

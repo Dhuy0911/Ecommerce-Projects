@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 import ProductsList from './ProductsList/ProductsList';
 import Footer from '../../components/Footer/Footer';
 import { useNavigate } from 'react-router-dom';
+import Loading from '../../components/Loading/Loading';
 
 
 
@@ -24,7 +25,7 @@ const ProductsShopPage = () => {
         try {
             const productsData = await appAxios.get('/products', {
                 params: {
-                    limit, page,search
+                    limit, page, search
                 }
             })
 
@@ -51,7 +52,7 @@ const ProductsShopPage = () => {
 
     return <Layout >
         <Header />
-        <Content >
+        <Content  >
             <div className="breadCrumb">
                 {/* <Breadcrumb style={{
                     width: '100%',
@@ -75,13 +76,13 @@ const ProductsShopPage = () => {
                     <div className="col-lg-3 col-md-6 col-12">
                         <div className="leftSide">
                             <input type="text" placeholder='Search...' className='my-3' onChange={(e) => setSearch(e.target.value)} value={search} />
-                            <Categiores />
+                            {/* <Categiores /> */}
                         </div>
                     </div>
                     <div className="col-lg-9 col-md-6 col-12">
-                        <div className="products-list d-flex flex-wrap justify-content-between">
+                        {loading ? <Loading /> : <div className="products-list d-flex flex-wrap justify-content-between">
                             <ProductsList handlechangePagination={handlechangePagination} products={products} loading={loading} />
-                        </div>
+                        </div>}
                         <Pagination onChange={handlechangePagination} style={{ textAlign: 'center', marginTop: '2rem' }} defaultCurrent={1} total={50} />
                     </div>
                 </div>

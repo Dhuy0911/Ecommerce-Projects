@@ -11,12 +11,14 @@ import appAxios from '../../service/axios';
 import { useContext } from 'react';
 import CartContext from '../../context/CartContext';
 import Header from '../../components/Header/Header';
+import Loading from '../../components/Loading/Loading';
 
 
 const DetailProduct = () => {
     const { cart, setCart } = useContext(CartContext);
     const [count, setCount] = useState(1);
     const { Panel } = Collapse;
+    const [loading, setLoading] = useState(false)
     const navigate = useNavigate();
     const onChange = (key) => {
         console.log(key);
@@ -24,6 +26,7 @@ const DetailProduct = () => {
     const [product, setProduct] = useState([]);
     const params = useParams()
     const handleFetchProduct = async (id) => {
+        setLoading(true)
         try {
             const productData = await appAxios.get(`/products/${id}`)
 
@@ -37,6 +40,7 @@ const DetailProduct = () => {
             })
             console.log('handleFetchProduct', e)
         }
+        setLoading(false)
 
     }
     useEffect(() => {
@@ -90,17 +94,16 @@ const DetailProduct = () => {
 
     }
 
-    return <>
-        <Header />
-        <section id="product">
+    return <>  <Header />
+       <section id="product">
             <div className="productName">
                 <h2>{product.name}</h2>
                 <div className='breadCumb'>
                     <Breadcrumb style={{
-                         width: '100%',
-                         display: 'flex',
-                         justifyContent: 'center',
-                         alignItems: 'center'
+                        width: '100%',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center'
                     }}>
                         <Breadcrumb.Item>
                             <a href="/">Home</a>
@@ -260,13 +263,13 @@ const DetailProduct = () => {
 
                 </div>
             </div>
-        </section>
+        </section> 
         {/* <div className='relatedProduct text-center'>
             <h1>Related Products</h1>
         <RelatedProduct />
         </div> */}
         <Footer />
-
+    
     </>
 }
 
