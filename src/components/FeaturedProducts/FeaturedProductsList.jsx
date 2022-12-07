@@ -41,21 +41,12 @@ const FeaturedProductsList = (props) => {
                         </div>}
                     </div>
                     <div className='text-center my-3'>
-                        <Button style={{
-                            textAlign: 'center',
-                            background: 'var(--black)',
-                            color: 'var(--white)',
-                            outline: 'none',
-                            border: 'none',
-                            margin: '20px'
-                        }}
+                        <button className='viewMoreBtn'
                             onClick={() => navigate('/shop')}
-                            icon={<ArrowRightOutlined />}
-                            shape="round"
-                            size={size} >
+                            shape="round" >
 
                             View more
-                        </Button>
+                        </button>
                     </div>
 
                 </div>

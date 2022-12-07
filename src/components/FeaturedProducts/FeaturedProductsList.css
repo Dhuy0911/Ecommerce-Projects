@@ -137,6 +137,21 @@
     color: var(--green);
 
 }
+.viewMoreBtn {
+    width: 20rem;
+    height: 4rem;
+    border-radius: 2rem;
+    background: var(--green);
+    border: none;
+    color: var(--white);
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+}
+.viewMoreBtn:hover {
+    background: var(--black);
+    transition: .4s;
+}
 
 /* Responsive products list */
 
