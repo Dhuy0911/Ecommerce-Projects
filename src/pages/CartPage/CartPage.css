@@ -4,7 +4,75 @@
     flex-wrap: wrap;
     padding: 0 2rem;
 }
-.total {
+
+.cartCalculation {
     width: 100%;
     line-height: 2;
+    background: #f8f8f8;
+    padding: 5rem 6rem;
+    margin-top: 5rem;
+}
+
+.btnCart {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border: none;
+    margin: 0 .4rem;
+    padding: .4rem;
+    cursor: pointer;
+}
+
+.table-responsive table tbody tr td {
+    border: .1rem solid #e1e1e1;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    text-align: center;
+    min-width: 15rem;
+}
+
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 1.5rem;
+    border: .1rem solid #e5e5e5;
+}
+
+.pro-qty {
+    border-bottom: .2rem solid #ccc;
+    padding: .2rem 0;
+    margin: 0 3rem;
+    display: inline-block !important;
+    justify-content: space-between;
+}
+
+.backToShopBtn {
+    width: 30rem;
+    height: 4rem;
+    border-radius: 2rem;
+    background: var(--green);
+    border: none;
+    color: var(--white);
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    
+}
+.backToShopBtn:hover {
+    background: var(--black);
+    transition: .4s;
 }

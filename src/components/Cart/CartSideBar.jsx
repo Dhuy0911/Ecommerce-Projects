@@ -32,7 +32,7 @@ const CartSideBar = (props) => {
                     <p>$ <span className="total-price">{totalPrice}.00</span></p>
                 </div>
                 <div className='text-center'>
-                    <Button onClick={() => {navigate('/cart')}} >View your cart</Button>
+                    <button className='view-cartBtn' onClick={() => {navigate('/cart')}} >View your cart</button>
                 </div>
             </div>
       </Drawer>

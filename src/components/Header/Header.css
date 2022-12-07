@@ -208,6 +208,20 @@
     cursor: pointer;
 
 }
+.view-cartBtn {
+    width: 20rem;
+    height: 4rem;
+    border-radius: 2rem;
+    background: var(--green);
+    border: none;
+    color: var(--white);
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+.view-cartBtn:hover {
+    background: var(--black);
+    transition: .4s;
+}
 
 /* Responsive mobile */
 
@@ -324,5 +338,6 @@
     .header__navigation-mobile--links {
         line-height: 2.5;
         font-weight: bold;
+        font-size: 2rem;
     }
 }

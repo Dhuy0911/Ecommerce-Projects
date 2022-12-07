@@ -60,18 +60,13 @@ const Header = (props) => {
                             <li><NavLink to="/shop" end>
                                 Shop
                             </NavLink></li>
-                            <li><NavLink to="/trend" end>
-                                Trend
-                            </NavLink></li>
-                            <li><NavLink to="/blog" end>
-                                Blog
+                            <li><NavLink to="/cart" end>
+                                Cart
                             </NavLink></li>
                             <li><NavLink to="/pages" end>
                                 Pages
                             </NavLink></li>
-                            <li><NavLink to="/contact" end>
-                                Contact
-                            </NavLink></li>
+
 
                         </ul>
                         {/* <!-- Toggle Mobile --> */}
@@ -83,7 +78,7 @@ const Header = (props) => {
                                 <div className="closeBtn">
                                     <i className="fa-solid fa-xmark"></i>
                                 </div>
-                                <Drawer title="Menu" placement="left" onClose={onClose1} open={open1} >
+                                <Drawer placement="left" onClose={onClose1} open={open1} >
                                     <ul className="header__navigation-mobile--links">
                                         <li><NavLink to="/" end>
                                             Home
@@ -92,10 +87,7 @@ const Header = (props) => {
                                             Shop
                                         </NavLink></li>
                                         <li><NavLink to="/trend" end>
-                                            Trend
-                                        </NavLink></li>
-                                        <li><NavLink to="/blog" end>
-                                            Blog
+                                            Cart
                                         </NavLink></li>
                                         <li><NavLink to="/pages" end>
                                             Pages
@@ -108,9 +100,6 @@ const Header = (props) => {
                             </div>
                             <div className="header__navigation-mobile--actions ">
                                 <ul className="icons">
-                                    <li><Link>
-                                        <i className="fa-solid fa-user" />
-                                    </Link></li>
                                     <li>
                                         <Badge count={totalProduct}>
 
@@ -127,10 +116,6 @@ const Header = (props) => {
 
                         <div className="header__navigation-wrapper--actions">
                             <ul className="icons">
-
-                                <li><Link className="user">
-                                    <i className="fa-solid fa-user"></i>
-                                </Link></li>
                                 <li>
                                     <Badge count={totalProduct}>
                                         <Link onClick={showDrawer2} className="cartBtn">

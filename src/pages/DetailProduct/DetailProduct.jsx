@@ -10,10 +10,12 @@ import { useState } from 'react';
 import appAxios from '../../service/axios';
 import { useContext } from 'react';
 import CartContext from '../../context/CartContext';
+import Header from '../../components/Header/Header';
 
 
 const DetailProduct = () => {
     const { cart, setCart } = useContext(CartContext);
+    const [count, setCount] = useState(1);
     const { Panel } = Collapse;
     const navigate = useNavigate();
     const onChange = (key) => {
@@ -67,11 +69,11 @@ const DetailProduct = () => {
             message: 'Add to cart success'
         })
 
+        console.log(count)
 
 
     }
 
-    const [count, setCount] = useState(1);
     const updateQuantity = (quantity) => {
 
         if (!count >= 1) {
@@ -89,16 +91,16 @@ const DetailProduct = () => {
     }
 
     return <>
+        <Header />
         <section id="product">
             <div className="productName">
                 <h2>{product.name}</h2>
                 <div className='breadCumb'>
                     <Breadcrumb style={{
-                        width: '100%',
-                        marginTop: '1rem',
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
+                         width: '100%',
+                         display: 'flex',
+                         justifyContent: 'center',
+                         alignItems: 'center'
                     }}>
                         <Breadcrumb.Item>
                             <a href="/">Home</a>
@@ -116,13 +118,13 @@ const DetailProduct = () => {
             <div className="container">
                 <div className="productDetail__wrapper">
                     <div className="row">
-                        <div className="col-lg-6 col-md-6 col-12 d-flex">
+                        <div className="col-lg-6 col-12 d-flex">
                             <div className="product-img">
                                 <img src={product.image}
                                     alt="" />
                             </div>
                         </div>
-                        <div className="col-lg-6 col-md-6 col-12">
+                        <div className="col-lg-6 col-12">
                             <div className="product-detail">
                                 <h2>{product.name}</h2>
                                 <ul className="icons d-flex">
@@ -150,7 +152,6 @@ const DetailProduct = () => {
                                     <hr />
                                 </div>
                                 <button onClick={() => handleAddToCart(count)} className='addToCartBtn'>Add To Cart</button>
-                                <button className='buyNowBtn' >Buy It Now</button>
                                 <button onClick={() => navigate('/cart')} className='buyNowBtn' >View Cart</button>
 
                                 <p>Guaranteed safe checkout</p>
