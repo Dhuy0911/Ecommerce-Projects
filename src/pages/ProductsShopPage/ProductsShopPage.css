@@ -15,13 +15,15 @@
         background: #f3f3f3;
     }
     .leftSide {
-        display: flex;
         width: 100%;
         overflow: hidden;
 
     }
     .leftSide input {
         height: 3rem;
+    }
+    .leftSide img {
+        display: none;
     }
     .categories {
         width: 100%;
