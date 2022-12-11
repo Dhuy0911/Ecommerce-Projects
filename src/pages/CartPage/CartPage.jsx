@@ -13,6 +13,7 @@ import ListProductInCart from '../../components/Cart/ListProductInCart';
 import CartTable from './CartTable';
 import { useState } from 'react';
 import Footer from '../../components/Footer/Footer';
+import EmtyCart from './EmtyCart';
 
 
 const CartPage = (props) => {
@@ -143,80 +144,86 @@ const CartPage = (props) => {
         </div>
 
 
+        {
+            cart.length > 0 ? (<div className="container">
+                <div className="row">
+                    <div className='cart__wrapper d-flex justify-content-between'>
+                        <div className='col-lg-12 col-md-6 col-12'>
+                            <div className='table-responsive table-content mb-45 '>
+                                <table>
+                                    <thead style={{
+                                        background: "#e1e1e1"
+                                    }}>
+                                        <tr className='fs-4 text-center'>
+                                            <th scope="col">Image</th>
+                                            <th scope="col">Product Name</th>
+                                            <th scope="col">Price</th>
+                                            <th scope="col">Quantity</th>
+                                            <th scope="col">Remove</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="table-group-divider">
+                                        {
+                                            cart.map((cartItem) => {
+                                                return <tr key={cartItem.id}>
+                                                    {/* <ProductInCart handleRemoveProduct={handleRemoveProduct} updateQuantity={handleUpdateQuantity} cartItem={cartItem} /> */}
+                                                    <td><img src={cartItem.image} alt="" style={{ width: '15rem' }} /></td>
+                                                    <td><p>{cartItem.name}</p></td>
+                                                    <td><span>{cartItem.price}</span></td>
+                                                    <td className='product-quantity'>
+                                                        <div className='pro-qty d-flex'>
+                                                            <Button onClick={() => handleUpdateQuantity(cartItem, -1)} className="minusItem btnCart"><i className="fa-solid fa-minus"></i></Button>
+                                                            {cartItem.quantity}
+                                                            <Button onClick={() => handleUpdateQuantity(cartItem, 1)} className="plusItem btnCart"><i className="fa-solid fa-plus"></i></Button>
+                                                        </div>
+
+                                                    </td>
+                                                    <td><span style={{
+                                                        cursor: 'pointer',
+                                                        color: 'var(--green)',
+                                                        fontWeight: 700,
+                                                    }} onClick={() => { handleRemoveProduct(cartItem) }} >X</span></td>
+
+                                                </tr>
+                                            })
+                                        }
 
 
-        {/* <CartTable data={cart} columns={columns} /> */}
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+
+                        </div>
+
+                        <div className='col-lg-5 col-12'>
+                            <div className='cartCalculation'>
+                                <CartInfomation totalProduct={totalProduct} totalPrice={totalPrice} />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>) : <EmtyCart />
+        }
         <div className="container">
             <div className="row">
-                <div className='cart__wrapper d-flex justify-content-between'>
-                    <div className='col-lg-12 col-md-6 col-12'>
-                        <div className='table-responsive table-content mb-45 '>
-                            <table>
-                                <thead style={{
-                                    background: "#e1e1e1"
-                                }}>
-                                    <tr className='fs-4 text-center'>
-                                        <th scope="col">Image</th>
-                                        <th scope="col">Product Name</th>
-                                        <th scope="col">Price</th>
-                                        <th scope="col">Quantity</th>
-                                        <th scope="col">Remove</th>
-                                    </tr>
-                                </thead>
-                                <tbody className="table-group-divider">
-                                    {
-                                        cart.map((cartItem) => {
-                                            return <tr key={cartItem.id}>
-                                                {/* <ProductInCart handleRemoveProduct={handleRemoveProduct} updateQuantity={handleUpdateQuantity} cartItem={cartItem} /> */}
-                                                <td><img src={cartItem.image} alt="" style={{ width: '15rem' }} /></td>
-                                                <td><p>{cartItem.name}</p></td>
-                                                <td><span>{cartItem.price}</span></td>
-                                                <td className='product-quantity'>
-                                                    <div className='pro-qty d-flex'>
-                                                        <Button onClick={() => handleUpdateQuantity(cartItem, -1)} className="minusItem btnCart"><i className="fa-solid fa-minus"></i></Button>
-                                                        {cartItem.quantity}
-                                                        <Button onClick={() => handleUpdateQuantity(cartItem, 1)} className="plusItem btnCart"><i className="fa-solid fa-plus"></i></Button>
-                                                    </div>
-
-                                                </td>
-                                                <td><span style={{
-                                                    cursor:'pointer',
-                                                    color:'var(--green)',
-                                                    fontWeight:"700",
-                                                }} onClick={() => { handleRemoveProduct(cartItem) }} >X</span></td>
-
-                                            </tr>
-                                        })
-                                    }
-
-
-                                </tbody>
-                            </table>
-
-                        </div>
-
-
-                    </div>
-
-                    <div className='col-lg-5 col-12'>
-                        <div className='cartCalculation'>
-                            <CartInfomation totalProduct={totalProduct} totalPrice={totalPrice} />
-                        </div>
-                    </div>
-                    <div className='col-lg-7 col-12' style={{
-                        textAlign: 'center',
-                        padding: '5rem',
-                    }}>
-                        <button className='backToShopBtn' onClick={() => { navigate('/shop') }} style={{
-                            margin: "3rem",
-                            fontSize: '1.5rem'
-                        }}>Continue Shopping</button><br />
-
-                    </div>
+                <div className='col-12' style={{
+                    textAlign: 'center',
+                    padding: '5rem',
+                }}>
+                    <button className='backToShopBtn' onClick={() => { navigate('/shop') }} style={{
+                        margin: "1rem",
+                        fontSize: '1.5rem'
+                    }}>Continue Shopping</button><br />
 
                 </div>
+
             </div>
         </div>
+
+        {/* <CartTable data={cart} columns={columns} /> */}
 
 
         <Footer />

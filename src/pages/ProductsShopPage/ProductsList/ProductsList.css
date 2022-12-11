@@ -20,10 +20,13 @@
 .featured-products__product:hover .featured-product__product-thumb .quickview-section ul {
     opacity: 1;
     visibility: visible;
+    background: var(--white);
+    color: var(--black);
 }
 
 .featured-products__product .featured-product__product-thumb .quickview-section ul li:hover {
-    color: var(--white);
+    color: var(--green);
+
 }
 
 
@@ -116,7 +119,7 @@
     .featured-products__product {
         margin: 1rem;
         width: calc(100% / 2 - 2rem);
-        
+
     }
 }
 

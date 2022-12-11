@@ -52,31 +52,41 @@ const ProductsShopPage = () => {
 
     return <Layout >
         <Header />
-        <Content  >
+        <Content >
             <div className="breadCrumb">
-                {/* <Breadcrumb style={{
+                <Breadcrumb style={{
                     width: '100%',
-                    marginTop: '30px',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    fontSize: '20px'
 
                 }}>
                     <Breadcrumb.Item>
-                       <a href="/"> Home</a>
+                        <a href="/"> Home</a>
                     </Breadcrumb.Item>
                     <Breadcrumb.Item>
                         Shop
                     </Breadcrumb.Item>
-                </Breadcrumb> */}
+                </Breadcrumb>
             </div>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-3 col-md-6 col-12">
                         <div className="leftSide">
-                            <input type="text" placeholder='Search...' className='my-3' onChange={(e) => setSearch(e.target.value)} value={search} />
-                            {/* <Categiores /> */}
+                            <input style={{
+                                width: "100%",
+                                height: '3rem',
+                                borderRadius: '2rem',
+                                padding: "2rem",
+                                margin: "1rem 0 2rem"
+                            }} type="text" placeholder='Search...' onChange={(e) => setSearch(e.target.value)} value={search} />
+                            <Categiores />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/newsletter_large.jpg"} alt=""
+                                style={{
+                                    width: "100%",
+                                    marginTop:"5rem"
+
+                                }} />
                         </div>
                     </div>
                     <div className="col-lg-9 col-md-6 col-12">

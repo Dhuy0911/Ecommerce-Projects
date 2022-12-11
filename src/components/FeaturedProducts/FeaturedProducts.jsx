@@ -1,8 +1,9 @@
 import { notification } from 'antd';
 import { useContext } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import CartContext from '../../context/CartContext';
+import { cartActionTypes } from '../../store/actionsType/cartActionTypes';
 import '../FeaturedProducts/FeaturedProductsList.css';
 
 
@@ -32,11 +33,11 @@ const FeaturedProducts = (props) => {
 
         newCart.push(newCartProduct);
         setCart(newCart);
+
         notification.success({
             title: 'success',
             message: 'Add to cart success'
         })
-
 
 
     }
@@ -53,7 +54,7 @@ const FeaturedProducts = (props) => {
                     <ul>
                         <li><p onClick={handleAddToCart} style={{ cursor: 'pointer' }} className="cart-productBtn"><i className="fa-sharp fa-solid fa-bag-shopping"></i></p>
                         </li>
-                        <li><p onClick={handleToDetail} style={{ cursor: 'pointer' }}  className="quickview" href="#"><i className="fa-solid fa-eye"></i></p></li>
+                        <li><p onClick={handleToDetail} style={{ cursor: 'pointer' }} className="quickview" href="#"><i className="fa-solid fa-eye"></i></p></li>
                         <li><p className="heart"><i className="fa-regular fa-heart"></i></p></li>
                     </ul>
                 </div>
@@ -74,7 +75,7 @@ const FeaturedProducts = (props) => {
             </div>
         </div>
         {
-            
+
         }
 
     </>

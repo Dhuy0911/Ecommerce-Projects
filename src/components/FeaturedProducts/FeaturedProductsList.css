@@ -48,10 +48,13 @@
 #featured-products .featured-products__product:hover .featured-product__product-thumb .quickview-section ul {
     opacity: 1;
     visibility: visible;
+    background: var(--white);
+    color: var(--black);
 }
 
 #featured-products .featured-products__product .featured-product__product-thumb .quickview-section ul li:hover {
     color: var(--green);
+
 }
 
 

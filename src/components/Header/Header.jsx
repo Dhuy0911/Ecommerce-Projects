@@ -129,7 +129,7 @@ const Header = (props) => {
                     </div>
                 </div>
             </nav>
-            <CartSideBar totalPrice={totalPrice} totalProduct={totalProduct} onClose2={onClose2} open2={open2} />
+            <CartSideBar cart={cart} totalPrice={totalPrice} totalProduct={totalProduct} onClose2={onClose2} open2={open2} />
 
 
 
